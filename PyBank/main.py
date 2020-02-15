@@ -3,7 +3,8 @@ import os
 import csv
 
 #Creating an object out of the CSV file
-budget_data = 'budget_data.csv'#os.path.join(r'D:\Homework3\python-challenge-master\PyBank\budget_data.csv')
+# budget_data = 'budget_data.csv'
+budget_data = os.path.join(r'C:\Users\zacha\Desktop\Python-Challenge\python-challenge\PyBank\budget_data.csv')
 
 # Variables Used for Homework 
 months = 0 
@@ -16,7 +17,6 @@ profits = []
 with open(budget_data, newline = "") as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
-
     csv_reader = csv.reader(csvfile, delimiter = ",")
 
     # Read the Header Row and the first row while adding 1 to total months and keeping track of profit/losses
@@ -56,9 +56,13 @@ with open(budget_data, newline = "") as csvfile:
     print("Financial Analysis")
     print("----------------")
     print(f'Total Months: {months}')
+    print("----")
     print(f'Total: ${profit_losses}')
+    print("----")
     print(f'Average Change: ${average_change}')
+    print("----")
     print(f'Greatest Increase in Profits: {Max_Day} ({Max_Change})')
+    print("----")
     print(f'Greatest Increase in Profits: {Min_Day} ({Min_Change})')
 
 
@@ -73,7 +77,7 @@ line3 = f'Total Months: {months}'
 
 line3 = str( print(f'Total Months: {months}'))
 
-output.write("Financial Analysis\n---------------\nTotal Months: 86\nTotal: $38382578\nAverage Change: $-2315.12\nGreatest Increase in Profits: Feb-12 (1926159)\nGreatest Increase in Profits: Sep-13 (-2196167)")
+output.write("Financial Analysis\n--:)-----:)---:)-----\nTotal Months: 86\nTotal: $38382578\nAverage Change: $-2315.12\nGreatest Increase in Profits: Feb-12 (1926159)\nGreatest Increase in Profits: Sep-13 (-2196167)")
 output.close()
     
 
